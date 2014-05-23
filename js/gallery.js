@@ -4,7 +4,7 @@ $(function() {
 	* STATIC VARIABLES
 	******************************/
 	var THUMBNAIL_WIDTH = 140,
-	GALLERY = $('#slideshow');
+		GALLERY = $('#slideshow');
 
 
 	/******************************
@@ -21,9 +21,11 @@ $(function() {
 	});
 	$(document).keydown(function(e){
 		switch(e.keyCode) {
+			// Left arrow press
 			case 37:
 				slidePrev();
 				break;
+			// Right arrow press
 			case 39:
 				slideNext();
 				break;
@@ -54,27 +56,27 @@ $(function() {
 
 		// Setting next image & thumb properties
 		GALLERY.find('.thumb').removeClass('active');
-	    nextThumb.addClass('active');
-	    active.addClass('last-active');
+		nextThumb.addClass('active');
+		active.addClass('last-active');
 
 	    // Transitioning to next image & thumbnail
-	    scrollThumbnails(nextThumb);
-	    next.css({opacity: 0.0})
-	        .addClass('active')
-	        .animate({opacity: 1.0}, 1000, function() {
-	            active.removeClass('active last-active');
-	        });
+		scrollThumbnails(nextThumb);
+		next.css({opacity: 0.0})
+			.addClass('active')
+			.animate({opacity: 1.0}, 1000, function() {
+				active.removeClass('active last-active');
+			});
 	};
 
 	var slidePrev = function() {
-	    var active = GALLERY.find('.img-wrapper.active');
+		var active = GALLERY.find('.img-wrapper.active');
 
-	    if (active.length === 0) {
+		if (active.length === 0) {
 			active = GALLERY.find('.img-wrapper:last');
-	    }
+		}
 
-	    // Setting next image & thumb properties
-	    loadPrevImage(active);
+		// Setting next image & thumb properties
+		loadPrevImage(active);
 	};
 
 	var loadPrevImage = function(active) {
@@ -88,11 +90,11 @@ $(function() {
 
 		// Transitioning to next image & thumbnail
 		scrollThumbnails(prevThumb);
-	    prev.css({opacity: 0.0})
-	        .addClass('active')
-	        .animate({opacity: 1.0}, 1000, function() {
-	            active.removeClass('active last-active');
-	        });
+		prev.css({opacity: 0.0})
+			.addClass('active')
+			.animate({opacity: 1.0}, 1000, function() {
+				active.removeClass('active last-active');
+			});
 	};
 
 	var loadClickedImage = function(id) {
@@ -106,12 +108,12 @@ $(function() {
 		imgThumb.addClass('active');
 	    
 	    // Transitioning to image & thumbnail
-	    scrollThumbnails(imgThumb);
-	    image.css({opacity: 0.0})
-	        .addClass('active')
-	        .animate({opacity: 1.0}, 1000, function() {
-	            currActive.removeClass('last-active');
-	        });
+		scrollThumbnails(imgThumb);
+		image.css({opacity: 0.0})
+			.addClass('active')
+			.animate({opacity: 1.0}, 1000, function() {
+				currActive.removeClass('last-active');
+			});
 	};
 
 	var scrollThumbnails = function(thumb) {
