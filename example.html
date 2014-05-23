@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="libary/font-awesome-4.1.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/slideshow.css">
+	</head>
+	<body>
+		<div id="container">
+			<div id="slideshow" class="fullscreen">
+				<!-- Below are the images in the gallery -->
+			    <div id="img-1" data-img-id="1" class="img-wrapper active" style="background-image: url('images/img1.jpg')"></div>
+			    <div id="img-2" data-img-id="2" class="img-wrapper" style="background-image: url('images/img2.jpg')"></div>
+			    <div id="img-3" data-img-id="3" class="img-wrapper" style="background-image: url('images/img3.jpg')"></div>
+			    <div id="img-4" data-img-id="4" class="img-wrapper" style="background-image: url('images/img2.jpg')"></div>
+			    <div id="img-1" data-img-id="5" class="img-wrapper" style="background-image: url('images/img1.jpg')"></div>
+			    <div id="img-2" data-img-id="6" class="img-wrapper" style="background-image: url('images/img2.jpg')"></div>
+			    <div id="img-3" data-img-id="7" class="img-wrapper" style="background-image: url('images/img3.jpg')"></div>
+			    <div id="img-4" data-img-id="8" class="img-wrapper" style="background-image: url('images/img2.jpg')"></div>
+
+				<!-- Below are the thumbnails of above images -->
+			    <div class="thumbs-container">
+			    	<div id="prev-btn" class="prev">
+			    		<i class="fa fa-chevron-left fa-3x"></i>
+			    	</div>
+
+					<ul class="thumbs">
+						<li data-thumb-id="1" class="thumb active" style="background-image: url('images/img1-thumb.jpg')"></li>
+						<li data-thumb-id="2" class="thumb" style="background-image: url('images/img2-thumb.jpg')"></li>
+						<li data-thumb-id="3" class="thumb" style="background-image: url('images/img3-thumb.jpg')"></li>
+						<li data-thumb-id="4" class="thumb" style="background-image: url('images/img2-thumb.jpg')"></li>
+						<li data-thumb-id="5" class="thumb" style="background-image: url('images/img1-thumb.jpg')"></li>
+						<li data-thumb-id="6" class="thumb" style="background-image: url('images/img2-thumb.jpg')"></li>
+						<li data-thumb-id="7" class="thumb" style="background-image: url('images/img3-thumb.jpg')"></li>
+						<li data-thumb-id="8" class="thumb" style="background-image: url('images/img2-thumb.jpg')"></li>
+					</ul>
+
+			    	<div id="next-btn" class="next">
+			    		<i class="fa fa-chevron-right fa-3x"></i>
+			    	</div>
+			    </div>
+			</div>
+		</div>
+
+		<!-- Including Scripts -->
+		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
+		<script src="js/gallery.js"></script>
+	</body>
+</html>
