@@ -1,7 +1,6 @@
 /*********************************
 * Slideshow Styling
 *********************************/
-
 #slideshow {
 	width: 100%;
 	height: 100%;
@@ -49,6 +48,9 @@
 		    z-index:9;
 		}
 
+	/*********************************
+	* Thumbnail Styling
+	*********************************/
 	.thumbs-container {
 		width: 100%;
 		height: 140px;
@@ -112,17 +114,3 @@
 				height: 116px;
 				border: 2px solid #FFF;
 			}
-
-
-/*********************************
-* Example Page Styling
-*********************************/
-#container {
-	width: 100%;
-	height: 100%;
-	max-width: 1200px;
-	max-height: 700px;
-	margin: 100px auto;
-
-    position:relative;
-}
