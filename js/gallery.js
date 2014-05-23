@@ -59,7 +59,7 @@ $(function() {
 		nextThumb.addClass('active');
 		active.addClass('last-active');
 
-	    // Transitioning to next image & thumbnail
+		// Transitioning to next image & thumbnail
 		scrollThumbnails(nextThumb);
 		next.css({opacity: 0.0})
 			.addClass('active')
@@ -107,7 +107,7 @@ $(function() {
 		currActive.addClass('last-active').removeClass('active');
 		imgThumb.addClass('active');
 	    
-	    // Transitioning to image & thumbnail
+		// Transitioning to image & thumbnail
 		scrollThumbnails(imgThumb);
 		image.css({opacity: 0.0})
 			.addClass('active')
