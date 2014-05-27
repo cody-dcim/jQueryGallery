@@ -1,41 +1,75 @@
 <html>
 	<head>
+		<!-- REQUIRED: Including Font Awesome for icons -->
 		<link rel="stylesheet" type="text/css" href="libary/font-awesome-4.1.0/css/font-awesome.min.css">
+		<!-- REQUIRED: Include of slideshow styling -->
 		<link rel="stylesheet" type="text/css" href="css/slideshow.css">
+
+		<!-- EXAMPLE: Including example page styling -->
 		<link rel="stylesheet" type="text/css" href="example.css">
 	</head>
 	<body>
+		<!-- 
+			Parent container of slideshow. If slideshow is not fullscreen, it will
+				fill this parent container (be sure to set a width/height or the 
+				slideshow will not show on the page).
+		-->
 		<div id="container">
 			<!--
 				Slideshow Classes:
-					* "fullscreen" : The slideshow will fill the entire viewport
-					* "expandable" : The slideshow will be capable of expanding to full screen
+					- "fullscreen" : The slideshow will fill the entire viewport
+					- "expandable" : The slideshow will be capable of expanding to full screen
 						and collapsing to only fill the parent container. This class has no
 						effect if the slideshow has the 'fullscreen' class already
 			-->
 			<div id="slideshow" class="expandable">
 				<!-- Expand / Collapse full screen button || Only visible when slideshow is not always full screen -->
+				<!--
+					Customization:
+						- This should be the opposite of the thumbs-container (below)
+						- Add class 'top' to fullscreen-btn to position at top of container
+						- Add class 'bottom' to fullscreen-btn to position at bottom of container
+				-->
 				<div id="fullscreen-btn" class="top">
 					<i class="fa fa-expand fa-2x"></i>
 				</div>
+
+				<!-- 
+					HOW TO: Add a new image:
+						1. Add a new Image object (order matters: must correlate to thumbnail order)
+							<div id="img-#" data-img-id="#" class="img-wrapper" style="background-image: url('URL')"></div>
+						2. Add a new Thumbnail object (order matters; must correlate to image order)
+							 <li data-thumb-id="#" class="thumb" style="background-image: url('URL')"></li>
+						3. That's it. Just make sure the image URL and order of html objects is correct
+				-->
 
 				<!-- Below are the images in the gallery -->
 			    <div id="img-1" data-img-id="1" class="img-wrapper active" style="background-image: url('images/img1.jpg')"></div>
 			    <div id="img-2" data-img-id="2" class="img-wrapper" style="background-image: url('images/img2.jpg')"></div>
 			    <div id="img-3" data-img-id="3" class="img-wrapper" style="background-image: url('images/img3.jpg')"></div>
 			    <div id="img-4" data-img-id="4" class="img-wrapper" style="background-image: url('images/img2.jpg')"></div>
-			    <div id="img-1" data-img-id="5" class="img-wrapper" style="background-image: url('images/img1.jpg')"></div>
-			    <div id="img-2" data-img-id="6" class="img-wrapper" style="background-image: url('images/img2.jpg')"></div>
-			    <div id="img-3" data-img-id="7" class="img-wrapper" style="background-image: url('images/img3.jpg')"></div>
-			    <div id="img-4" data-img-id="8" class="img-wrapper" style="background-image: url('images/img2.jpg')"></div>
+			    <div id="img-5" data-img-id="5" class="img-wrapper" style="background-image: url('images/img1.jpg')"></div>
+			    <div id="img-6" data-img-id="6" class="img-wrapper" style="background-image: url('images/img2.jpg')"></div>
+			    <div id="img-7" data-img-id="7" class="img-wrapper" style="background-image: url('images/img3.jpg')"></div>
+			    <div id="img-8" data-img-id="8" class="img-wrapper" style="background-image: url('images/img2.jpg')"></div>
 
 				<!-- Below are the thumbnails of above images -->
+				<!--
+					Customization:
+						- Add class 'top' to thumbs-container to position at top of container
+						- Add class 'bottom' to thumbs-container to position at bottom of container
+				-->
 			    <div class="thumbs-container bottom">
 			    	<div id="prev-btn" class="prev">
 			    		<i class="fa fa-chevron-left fa-3x"></i>
 			    	</div>
 
 					<ul class="thumbs">
+						<!-- Below are the thumbnails for the gallery -->
+						<!--
+							Thumbanils are separate image files as scaling the very large images
+								reduced the performance of the page (although it is possible).
+						-->
 						<li data-thumb-id="1" class="thumb active" style="background-image: url('images/img1-thumb.jpg')"></li>
 						<li data-thumb-id="2" class="thumb" style="background-image: url('images/img2-thumb.jpg')"></li>
 						<li data-thumb-id="3" class="thumb" style="background-image: url('images/img3-thumb.jpg')"></li>
@@ -53,8 +87,8 @@
 			</div>
 		</div>
 
-		<!-- Including Scripts -->
+		<!-- Including Scripts (jQuery and slideshow.js) -->
 		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
-		<script src="js/gallery.js"></script>
+		<script src="js/slideshow.js"></script>
 	</body>
 </html>
