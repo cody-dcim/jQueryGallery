@@ -6,7 +6,19 @@
 	</head>
 	<body>
 		<div id="container">
-			<div id="slideshow" class="fullscreen">
+			<!--
+				Slideshow Classes:
+					* "fullscreen" : The slideshow will fill the entire viewport
+					* "expandable" : The slideshow will be capable of expanding to full screen
+						and collapsing to only fill the parent container. This class has no
+						effect if the slideshow has the 'fullscreen' class already
+			-->
+			<div id="slideshow" class="expandable">
+				<!-- Expand / Collapse full screen button || Only visible when slideshow is not always full screen -->
+				<div id="fullscreen-btn" class="top">
+					<i class="fa fa-expand fa-2x"></i>
+				</div>
+
 				<!-- Below are the images in the gallery -->
 			    <div id="img-1" data-img-id="1" class="img-wrapper active" style="background-image: url('images/img1.jpg')"></div>
 			    <div id="img-2" data-img-id="2" class="img-wrapper" style="background-image: url('images/img2.jpg')"></div>

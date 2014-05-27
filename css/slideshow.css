@@ -22,6 +22,39 @@
 
 		overflow: hidden;
 	}
+		#fullscreen-btn {
+			width: 28px;
+			height: 32px;
+			padding: 4px 6px;
+
+			/* Default positioning of top-right corner */
+			position: absolute;
+			z-index: 13;
+			display: none;
+
+			line-height: 40px;
+			text-align: center;
+			color: #BABABA;
+
+			background-color: #555555;
+			opacity: .5;
+
+			cursor: pointer;
+		}
+		#fullscreen-btn:hover {
+			color: #FFFFFF;
+		}
+			#fullscreen-btn.top {
+				top: 10px;
+				right: 10px;
+			}
+			#fullscreen-btn.bottom {
+				bottom: 10px;
+				right: 10px;
+			}
+			.expandable #fullscreen-btn {
+				display: block;
+			}
 	.img-wrapper {
 	    min-width: 100%;
 	    min-height: 100%;
